@@ -1,4 +1,5 @@
 package core.basesyntax;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -23,7 +24,8 @@ public class SalaryInfo {
                 if (temp[NAME_POSITION].equals(name)
                         && dataOfSalary.isAfter(from.minusDays(1))
                         && dataOfSalary.isBefore(to.plusDays(1))) {
-                    money += Integer.parseInt(temp[DAYS_AMOUNT_POSITION]) * Integer.parseInt(temp[MONEY_PER_DAY_POSITION]);
+                    money += Integer.parseInt(temp[DAYS_AMOUNT_POSITION])
+                            * Integer.parseInt(temp[MONEY_PER_DAY_POSITION]);
                 }
             }
             StringBuilder builder = new StringBuilder();
